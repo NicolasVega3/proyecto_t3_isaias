@@ -7,8 +7,13 @@ using System.Threading.Tasks;
 
 namespace Proyecto_T3_GRUPOTERRONCITOS
 {
-    internal class Registrar
+    public class Registrar
     {
+        private string[] nombreDocente = new string[0];
+        private int[] DNI_DOCENTE = new int[0];
+        private string nombre_DO;
+        private string DNI_DO;
+
         public static int SelecRegistrar() 
         {
             ConsoleKey tecla;
@@ -73,6 +78,51 @@ namespace Proyecto_T3_GRUPOTERRONCITOS
 
             } while (tecla != ConsoleKey.Enter);
             return index;
+        }
+
+
+        public void regiDocente()
+        {
+            Console.WriteLine("REGISTRO DE DOCENTE");
+            Console.Write("Ingrese el nombre del docente: ");
+            nombre_DO = Console.ReadLine();
+
+            bool dniValido = false;
+
+            do
+            {
+                Console.Write("Ingrese su DNI: ");
+                DNI_DO = Console.ReadLine().Trim();
+
+                if (DNI_DO.Length == 8 && int.TryParse(DNI_DO, out _))
+                {
+                    dniValido = true;
+                    Console.WriteLine("DNI válido.");
+
+                    bool existeDNI = false;
+
+                    for (int i = 0; DNI_DOCENTE.Length; i++)
+                    {
+                        if (DNI_DOCENTE[i] == DNI_DO)
+
+                        {
+                            existeDNI = true;
+                            break;
+                        }
+                    }
+
+                    if (existeDNI == true)
+                    {
+                        Console.WriteLine("El DNI ya existe. Intente con otro");
+                        break;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("¡ERROR! El DNI debe tener exactamente 8 números.");
+                }
+
+            } while (!dniValido);
         }
     }
 }
