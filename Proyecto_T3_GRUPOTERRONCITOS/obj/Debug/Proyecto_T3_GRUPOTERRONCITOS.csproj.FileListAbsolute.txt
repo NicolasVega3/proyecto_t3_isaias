@@ -1,0 +1,8 @@
+C:\Users\USUARIO\Desktop\Proyecto_T3_Isaias\Proyecto_T3_GRUPOTERRONCITOS\obj\Debug\Proyecto_T3_GRUPOTERRONCITOS.csproj.AssemblyReference.cache
+C:\Users\USUARIO\Desktop\Proyecto_T3_Isaias\Proyecto_T3_GRUPOTERRONCITOS\obj\Debug\Proyecto_T3_GRUPOTERRONCITOS.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\Desktop\Proyecto_T3_Isaias\Proyecto_T3_GRUPOTERRONCITOS\bin\Debug\Proyecto_T3_GRUPOTERRONCITOS.exe.config
+C:\Users\USUARIO\Desktop\Proyecto_T3_Isaias\Proyecto_T3_GRUPOTERRONCITOS\bin\Debug\Proyecto_T3_GRUPOTERRONCITOS.exe
+C:\Users\USUARIO\Desktop\Proyecto_T3_Isaias\Proyecto_T3_GRUPOTERRONCITOS\bin\Debug\Proyecto_T3_GRUPOTERRONCITOS.pdb
+C:\Users\USUARIO\Desktop\Proyecto_T3_Isaias\Proyecto_T3_GRUPOTERRONCITOS\obj\Debug\Proyecto_T3_GRUPOTERRONCITOS.exe
+C:\Users\USUARIO\Desktop\Proyecto_T3_Isaias\Proyecto_T3_GRUPOTERRONCITOS\obj\Debug\Proyecto_T3_GRUPOTERRONCITOS.pdb
+C:\Users\USUARIO\Desktop\Proyecto_T3_Isaias\Proyecto_T3_GRUPOTERRONCITOS\obj\Debug\Proyecto_T3_GRUPOTERRONCITOS.exe.config
