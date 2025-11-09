@@ -90,37 +90,45 @@ namespace Proyecto_T3_GRUPOTERRONCITOS
             Console.Write("Nombre: ");
             nombre_DO = Console.ReadLine();
 
+            bool dniValidoYUnico = true;
+            bool existeDNIDO = false;
             do
             {
-                Console.SetCursorPosition(10, 12);
-                Console.Write("DNI: ");
+                Console.Write("\t  DNI: ");
                 DNI_DO = Convert.ToInt32(Console.ReadLine());
+
                 if (!(DNI_DO < 100000000 && DNI_DO > 9999999))
-                {
-                    Console.WriteLine("DNI debe tener 8 dígitos");
-                    Console.WriteLine("Presione cualquier tecla para volver a intentarlo");
+                {                    
+                    Console.WriteLine("\t  DNI debe tener 8 dígitos");                    
+                    Console.WriteLine("\t  Presione cualquier tecla para volver a intentarlo");
                     Console.ReadKey();
+                    dniValidoYUnico = false;
                 }
                 else
-                    break;
-            } while (true);
-
-            bool existeDNIDO = false;
-
-            for (int i = 0; i < DNI_DOCENTE.Length; i++)
-            {
-                if (DNI_DOCENTE[i] == DNI_DO)
                 {
-                    existeDNIDO = true;
-                    break;
-                }
-            }
+                    for (int i = 0; i < DNI_DOCENTE.Length; i++)
+                    {
+                        if (DNI_DOCENTE[i] == DNI_DO)
+                        {
+                            existeDNIDO = true;
+                            break;
+                        }
+                    }
 
-            if (existeDNIDO == true)
-            {
-                Console.SetCursorPosition(10, 13);
-                Console.WriteLine("El DNI ya existe. Intente con otro");
-            }
+                    if (existeDNIDO == true)
+                    {
+                        
+                        Console.WriteLine("\t  El DNI ya existe. Intente con otro");
+                        Console.ReadKey();
+                        Console.Write("\t  DNI: ");
+                        DNI_DO = Convert.ToInt32(Console.ReadLine());
+                        dniValidoYUnico = true;
+                    }
+                }
+
+            } while (dniValidoYUnico == false);
+
+            Console.WriteLine("\t  DOCENTE CORRECTAMENTE REGISTRADO");
 
             Array.Resize(ref DNI_DOCENTE, DNI_DOCENTE.Length + 1);
             Array.Resize(ref nombreDocente, nombreDocente.Length + 1);
