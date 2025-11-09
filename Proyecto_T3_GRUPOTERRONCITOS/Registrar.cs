@@ -9,10 +9,10 @@ namespace Proyecto_T3_GRUPOTERRONCITOS
 {
     public class Registrar
     {
-        private string[] nombreDocente = new string[0];
-        private int[] DNI_DOCENTE = new int[0];
-        private string nombre_DO;
-        private string DNI_DO;
+        public static string[] nombreDocente = new string[0];
+        public static int[] DNI_DOCENTE = new int[0];
+        public static string nombre_DO;
+        public static int DNI_DO;
 
         public static int SelecRegistrar() 
         {
@@ -87,42 +87,28 @@ namespace Proyecto_T3_GRUPOTERRONCITOS
             Console.Write("Ingrese el nombre del docente: ");
             nombre_DO = Console.ReadLine();
 
-            bool dniValido = false;
-
-            do
+            bool existeDNIDO = false;
+            for (int i = 0; i < DNI_DOCENTE.Length; i++)
             {
-                Console.Write("Ingrese su DNI: ");
-                DNI_DO = Console.ReadLine().Trim();
-
-                if (DNI_DO.Length == 8 && int.TryParse(DNI_DO, out _))
+                if (DNI_DOCENTE[i] == DNI_DO)
                 {
-                    dniValido = true;
-                    Console.WriteLine("DNI válido.");
-
-                    bool existeDNI = false;
-
-                    for (int i = 0; DNI_DOCENTE.Length; i++)
-                    {
-                        if (DNI_DOCENTE[i] == DNI_DO)
-
-                        {
-                            existeDNI = true;
-                            break;
-                        }
-                    }
-
-                    if (existeDNI == true)
-                    {
-                        Console.WriteLine("El DNI ya existe. Intente con otro");
-                        break;
-                    }
+                    existeDNIDO = true;
+                    break;
                 }
-                else
-                {
-                    Console.WriteLine("¡ERROR! El DNI debe tener exactamente 8 números.");
-                }
+            }
 
-            } while (!dniValido);
+            if (existeDNIDO == true)
+            {
+                Console.WriteLine("El DNI ya existe. Intente con otro");
+                Console.WriteLine("");
+                return;
+            }
+            Array.Resize(ref DNI_DOCENTE, DNI_DOCENTE.Length + 1);
+            Array.Resize(ref nombreDocente, nombreDocente.Length + 1);
+
+            DNI_DOCENTE[DNI_DOCENTE.Length - 1] = DNI_DO;
+            nombreDocente[nombreDocente.Length - 1] = nombre_DO;
         }
+
     }
 }
