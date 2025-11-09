@@ -11,6 +11,7 @@ namespace Proyecto_T3_GRUPOTERRONCITOS
         static void Main(string[] args)
         {
             int opcion;
+
             do
             {
                 opcion = menú.OpcionMenu();
@@ -21,7 +22,11 @@ namespace Proyecto_T3_GRUPOTERRONCITOS
                         switch (opcRegi) 
                         {
                             case 0:
-                                //Llamar al método para registrar docente
+                                Registrar.regiDocente();
+                                Console.SetCursorPosition(10, 18);
+                                Console.Write("Presione cualquier tecla para volver al menú");
+                                Console.ReadKey();
+
                                 break;
                             case 1:
                                 //Llamar al método para registrar estudiante
@@ -31,6 +36,7 @@ namespace Proyecto_T3_GRUPOTERRONCITOS
                                 break;
                         }
                         break;
+
                     case 1:
                         
                         break;

@@ -50,6 +50,7 @@ namespace Proyecto_T3_GRUPOTERRONCITOS
                 {
                     if (i == index)
                     {
+                        
                         Console.BackgroundColor = ConsoleColor.Yellow;
                         Console.ForegroundColor = ConsoleColor.Black;
                         Console.WriteLine($"{opciones[i]}");
@@ -81,13 +82,31 @@ namespace Proyecto_T3_GRUPOTERRONCITOS
         }
 
 
-        public void regiDocente()
+        public static void regiDocente()
         {
+            Console.SetCursorPosition(10, 10);
             Console.WriteLine("REGISTRO DE DOCENTE");
-            Console.Write("Ingrese el nombre del docente: ");
+            Console.SetCursorPosition(10, 11);
+            Console.Write("Nombre: ");
             nombre_DO = Console.ReadLine();
 
+            do
+            {
+                Console.SetCursorPosition(10, 12);
+                Console.Write("DNI: ");
+                DNI_DO = Convert.ToInt32(Console.ReadLine());
+                if (!(DNI_DO < 100000000 && DNI_DO > 9999999))
+                {
+                    Console.WriteLine("DNI debe tener 8 dígitos");
+                    Console.WriteLine("Presione cualquier tecla para volver a intentarlo");
+                    Console.ReadKey();
+                }
+                else
+                    break;
+            } while (true);
+
             bool existeDNIDO = false;
+
             for (int i = 0; i < DNI_DOCENTE.Length; i++)
             {
                 if (DNI_DOCENTE[i] == DNI_DO)
@@ -99,16 +118,15 @@ namespace Proyecto_T3_GRUPOTERRONCITOS
 
             if (existeDNIDO == true)
             {
+                Console.SetCursorPosition(10, 13);
                 Console.WriteLine("El DNI ya existe. Intente con otro");
-                Console.WriteLine("");
-                return;
             }
+
             Array.Resize(ref DNI_DOCENTE, DNI_DOCENTE.Length + 1);
             Array.Resize(ref nombreDocente, nombreDocente.Length + 1);
 
             DNI_DOCENTE[DNI_DOCENTE.Length - 1] = DNI_DO;
             nombreDocente[nombreDocente.Length - 1] = nombre_DO;
         }
-
     }
 }
