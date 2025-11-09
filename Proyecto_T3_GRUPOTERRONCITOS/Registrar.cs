@@ -9,11 +9,11 @@ namespace Proyecto_T3_GRUPOTERRONCITOS
 {
     internal class Registrar
     {
-        public static int OpcionRegistrar() 
+        public static int SelecRegistrar() 
         {
             ConsoleKey tecla;
             string[] opciones = {"DOCENTE", "ESTUDIANTE", "CURSO", "VOLVER" };
-            string[] menuPrincipal = { "REGISTRAR", "ASISTENCIA", "REPORTES", "SALIDA" };
+            string[] arregloMenu = { "REGISTRAR", "ASISTENCIA", "REPORTES", "SALIDA" };
             int index = 0;
 
             do
@@ -27,18 +27,18 @@ namespace Proyecto_T3_GRUPOTERRONCITOS
                 Console.ResetColor();
                 Console.WriteLine();
 
-                for (int i = 0; i < menuPrincipal.Length; i++) 
+                for (int i = 0; i < arregloMenu.Length; i++) 
                 {
                     if (i == 0)
                     {
                         Console.BackgroundColor = ConsoleColor.White;
                         Console.ForegroundColor = ConsoleColor.Black;
-                        Console.Write("    "+menuPrincipal[i] + "    ");
+                        Console.Write("    " + arregloMenu[i] + "    ");
                         Console.ResetColor();
                     }
                     else
                     {
-                        Console.Write(menuPrincipal[i] + "     ");
+                        Console.Write(arregloMenu[i] + "     ");
                     }
                 }
                 for (int i = 0; i < opciones.Length; i++) 

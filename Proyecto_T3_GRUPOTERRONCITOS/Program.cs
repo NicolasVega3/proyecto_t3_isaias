@@ -17,7 +17,19 @@ namespace Proyecto_T3_GRUPOTERRONCITOS
                 switch (opcion) 
                 {
                     case 0:
-                        Registrar.OpcionRegistrar();
+                        int opcRegi = Registrar.SelecRegistrar();
+                        switch (opcRegi) 
+                        {
+                            case 0:
+                                //Llamar al método para registrar docente
+                                break;
+                            case 1:
+                                //Llamar al método para registrar estudiante
+                                break;
+                            case 2:
+                                //Llamar al método para registrar curso
+                                break;
+                        }
                         break;
                     case 1:
                         
@@ -26,9 +38,6 @@ namespace Proyecto_T3_GRUPOTERRONCITOS
 
                         break;
                     case 3:
-
-                        break;
-                    case 4:
 
                         break;
                 }
