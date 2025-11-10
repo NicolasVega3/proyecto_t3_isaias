@@ -47,21 +47,29 @@ namespace Proyecto_T3_GRUPOTERRONCITOS
                     case 1:
                         break;
                     case 2:
-                        int opcRepor = Registrar.ReportesMenu();
-                        switch (opcRepor) 
+                        int opcregi = Registrar.ReportesMenu();
+                        switch (opcregi) 
                         {
                             case 0:
                                 Registrar.docentes();
+                                Console.SetCursorPosition(10, 18);
+                                Console.Write("Presione cualquier tecla para volver al menú");
+                                Console.ReadKey();
                                 break;
                             case 1:
                                 Registrar.alumnos();
+                                Console.SetCursorPosition(10, 18);
+                                Console.Write("Presione cualquier tecla para volver al menú");
+                                Console.ReadKey();
                                 break;
                             case 2:
                                 Registrar.cursos();
+                                Console.SetCursorPosition(10, 18);
+                                Console.Write("Presione cualquier tecla para volver al menú");
+                                Console.ReadKey();
                                 break;
-                            case 3:
-                                return;
                         }
+
                         break;
                     case 3:
 
