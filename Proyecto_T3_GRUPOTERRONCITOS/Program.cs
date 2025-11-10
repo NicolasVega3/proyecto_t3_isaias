@@ -36,8 +36,8 @@ namespace Proyecto_T3_GRUPOTERRONCITOS
                                 Console.ReadKey();
                                 break;
                             case 2:
-                                Registrar.regilibro();
-                                Console.SetCursorPosition(10, 18);
+                                Registrar.regiCurso();
+                                Console.SetCursorPosition(10, 20);
                                 Console.Write("Presione cualquier tecla para volver al menú");
                                 Console.ReadKey();
                                 break;
@@ -50,8 +50,8 @@ namespace Proyecto_T3_GRUPOTERRONCITOS
                         Console.SetCursorPosition(8, 18);
                         Console.Write("Presione cualquier tecla para volver al menú");
                         Console.ReadKey();
-
                         break;
+
                     case 2:
                         int opcregi = Registrar.ReportesMenu();
                         switch (opcregi) 

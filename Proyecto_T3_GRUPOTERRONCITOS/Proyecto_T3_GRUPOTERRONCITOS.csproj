@@ -43,12 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Asistencia.cs" />
     <Compile Include="menú.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registrar.cs" />
-    <Compile Include="Reportes.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

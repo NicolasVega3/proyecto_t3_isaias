@@ -13,18 +13,18 @@ namespace Proyecto_T3_GRUPOTERRONCITOS
         private static string[] nombreDocente = new string[0];
         private static int[] DNI_DOCENTE = new int[0];
         private static string nombre_DO;
-        private static int DNI_DO;
+        private static int DNI_DO = 0;
 
         //Arreglos y def de variables de alumnos
         private static string[] nombreAlumno = new string[0];
         private static int[] DNI_Alumno = new int[0];
         private static string nombre_Al;
-        private static int DNI_Al;
+        private static int DNI_Al = 0;
 
         //Arreglos y def de variables de cursos
         private static string[] nomCurso = new string[0];
         private static double[] precioCurso = new double[0];
-        private static int[] codigoCurso = new int[0];
+        private static string[] codigoCurso = new string[0];
         private static string nom_Curso;
         private static double newPrecio;
         private static string codigo_Curso;
@@ -106,7 +106,6 @@ namespace Proyecto_T3_GRUPOTERRONCITOS
             Console.Write("NOMBRE DOCENTE: ");
             string nombre_DO = Console.ReadLine();
 
-            int DNI_DO = 0;
             bool dniValido = false;
 
             while (!dniValido)
@@ -171,7 +170,6 @@ namespace Proyecto_T3_GRUPOTERRONCITOS
             Console.Write("NOMBRE ALUMNO: ");
             nombre_Al = Console.ReadLine();
 
-            int DNI_Al = 0;
             bool dniValido = false;
 
             while (!dniValido)
@@ -227,9 +225,107 @@ namespace Proyecto_T3_GRUPOTERRONCITOS
         }
 
 
-        public static void regilibro()
+        public static void regiCurso()
         {
+            Console.SetCursorPosition(10, 10);
+            Console.WriteLine("REGISTRO DE CURSO");
 
+            string codigo = "";
+            string nom_Curso = "";
+            double precio = 0;
+
+            bool codigoValido = false;
+            while (!codigoValido)
+            {
+                Console.Write("\t  CODIGO: ");
+                codigo = Console.ReadLine();
+
+                if (codigo.Length != 6)
+                {
+                    Console.WriteLine("\t  El código debe tener 6 dígitos");
+                    Console.ReadKey();
+                    continue;
+                }
+
+                bool existeCodigo = false;
+                for (int i = 0; i < codigoCurso.Length; i++)
+                {
+                    if (codigoCurso[i] == codigo)
+                    {
+                        existeCodigo = true;
+                        break;
+                    }
+                }
+
+                if (existeCodigo)
+                {
+                    Console.WriteLine("\t  El código ya existe. Ingrese uno diferente.");
+                    Console.ReadKey();
+                    continue;
+                }
+
+                codigoValido = true;
+            }
+
+            bool nombreValido = false;
+            while (!nombreValido)
+            {
+                Console.Write("\t  CURSO: ");
+                nom_Curso = Console.ReadLine();
+
+                // Validar si está vacío
+                if (nom_Curso == "")
+                {
+                    Console.WriteLine("\t  El nombre no puede estar vacío.");
+                    Console.ReadKey();
+                    continue;
+                }
+
+                bool existeNombre = false;
+                for (int i = 0; i < nomCurso.Length; i++)
+                {
+                    if (nomCurso[i].ToLower() == nom_Curso.ToLower())
+                    {
+                        existeNombre = true;
+                        break;
+                    }
+                }
+
+                if (existeNombre)
+                {
+                    Console.WriteLine("\t  Ese curso ya existe. Ingrese otro nombre.");
+                    Console.ReadKey();
+                    continue;
+                }
+
+                nombreValido = true;
+            }
+
+            bool precioValido = false;
+            while (!precioValido)
+            {
+                Console.Write("\t  PRECIO: ");
+                string input = Console.ReadLine();
+
+                if (double.TryParse(input, out precio) && precio >= 0)
+                {
+                    precioValido = true;
+                }
+                else
+                {
+                    Console.WriteLine("\t  Ingrese un precio válido.");
+                    Console.ReadKey();
+                }
+            }
+            Array.Resize(ref codigoCurso, codigoCurso.Length + 1);
+            Array.Resize(ref nomCurso, nomCurso.Length + 1);
+            Array.Resize(ref precioCurso, precioCurso.Length + 1);
+
+            codigoCurso[codigoCurso.Length - 1] = codigo;
+            nomCurso[nomCurso.Length - 1] = nom_Curso;
+            precioCurso[precioCurso.Length - 1] = precio;
+
+            Console.WriteLine("\t  Curso registrado correctamente.");
         }
 
         public static int ReportesMenu()
@@ -346,7 +442,7 @@ namespace Proyecto_T3_GRUPOTERRONCITOS
         public static void cursos() 
         {
             Console.SetCursorPosition(20, 10);
-            Console.WriteLine("CURSOS:\n");
+            Console.WriteLine("\tCURSOS:\n");
             if (nomCurso.Length == 0)
             {
                 Console.SetCursorPosition(12, 11);
@@ -357,7 +453,7 @@ namespace Proyecto_T3_GRUPOTERRONCITOS
                 for (int i = 0; i < nomCurso.Length; i++) 
                 {
                     Console.SetCursorPosition(12, 11 + i);
-                    Console.WriteLine($"Curso: {nomCurso[i]}  |  Precio: S/.{precioCurso[i]}");
+                    Console.WriteLine($"Curso: {nomCurso[i]}  |  Codigo: {codigoCurso[i]}  |  Precio: S/.{precioCurso[i]}");
                 }
                     
             }
