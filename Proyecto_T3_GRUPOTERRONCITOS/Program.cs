@@ -45,6 +45,12 @@ namespace Proyecto_T3_GRUPOTERRONCITOS
                         break;
 
                     case 1:
+                        Console.SetCursorPosition(15, 11);
+                        Console.WriteLine("\nCompre la version premium para aceder a esta parte del menú");
+                        Console.SetCursorPosition(8, 18);
+                        Console.Write("Presione cualquier tecla para volver al menú");
+                        Console.ReadKey();
+
                         break;
                     case 2:
                         int opcregi = Registrar.ReportesMenu();
@@ -72,7 +78,8 @@ namespace Proyecto_T3_GRUPOTERRONCITOS
 
                         break;
                     case 3:
-
+                        Console.SetCursorPosition(15, 10);
+                        Console.WriteLine("Usted ah saldio del programa");
                         break;
                 }
 

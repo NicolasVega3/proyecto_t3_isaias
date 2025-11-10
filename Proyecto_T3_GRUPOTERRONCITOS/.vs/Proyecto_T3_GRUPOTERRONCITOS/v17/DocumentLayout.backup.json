@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{744C3554-1274-4227-8BB5-83AA29A1D487}|Proyecto_T3_GRUPOTERRONCITOS.csproj|solutionrelative:registrar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{744C3554-1274-4227-8BB5-83AA29A1D487}|Proyecto_T3_GRUPOTERRONCITOS.csproj|C:\\Users\\USUARIO\\Desktop\\Proyecto_T3_Isaias\\Proyecto_T3_GRUPOTERRONCITOS\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{744C3554-1274-4227-8BB5-83AA29A1D487}|Proyecto_T3_GRUPOTERRONCITOS.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{744C3554-1274-4227-8BB5-83AA29A1D487}|Proyecto_T3_GRUPOTERRONCITOS.csproj|C:\\Users\\USUARIO\\Desktop\\Proyecto_T3_Isaias\\Proyecto_T3_GRUPOTERRONCITOS\\men\u00FA.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{744C3554-1274-4227-8BB5-83AA29A1D487}|Proyecto_T3_GRUPOTERRONCITOS.csproj|solutionrelative:men\u00FA.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{744C3554-1274-4227-8BB5-83AA29A1D487}|Proyecto_T3_GRUPOTERRONCITOS.csproj|C:\\Users\\USUARIO\\Desktop\\Proyecto_T3_Isaias\\Proyecto_T3_GRUPOTERRONCITOS\\reportes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{744C3554-1274-4227-8BB5-83AA29A1D487}|Proyecto_T3_GRUPOTERRONCITOS.csproj|solutionrelative:reportes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{744C3554-1274-4227-8BB5-83AA29A1D487}|Proyecto_T3_GRUPOTERRONCITOS.csproj|C:\\Users\\USUARIO\\Desktop\\Proyecto_T3_Isaias\\Proyecto_T3_GRUPOTERRONCITOS\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{744C3554-1274-4227-8BB5-83AA29A1D487}|Proyecto_T3_GRUPOTERRONCITOS.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{744C3554-1274-4227-8BB5-83AA29A1D487}|Proyecto_T3_GRUPOTERRONCITOS.csproj|C:\\Users\\USUARIO\\Desktop\\Proyecto_T3_Isaias\\Proyecto_T3_GRUPOTERRONCITOS\\asistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,7 +46,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Reportes.cs",
               "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Proyecto_T3_Isaias\\Proyecto_T3_GRUPOTERRONCITOS\\Reportes.cs",
               "RelativeDocumentMoniker": "Reportes.cs",
@@ -59,7 +59,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "men\u00FA.cs",
               "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Proyecto_T3_Isaias\\Proyecto_T3_GRUPOTERRONCITOS\\men\u00FA.cs",
               "RelativeDocumentMoniker": "men\u00FA.cs",
@@ -78,20 +78,20 @@
               "RelativeDocumentMoniker": "Registrar.cs",
               "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Proyecto_T3_Isaias\\Proyecto_T3_GRUPOTERRONCITOS\\Registrar.cs",
               "RelativeToolTip": "Registrar.cs",
-              "ViewState": "AgIAAGYBAAAAAAAAAAAmwI4BAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-10T03:25:53.216Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Proyecto_T3_Isaias\\Proyecto_T3_GRUPOTERRONCITOS\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Proyecto_T3_Isaias\\Proyecto_T3_GRUPOTERRONCITOS\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAYwEIAAABAAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAUwFEAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-09T03:30:09.929Z",
               "EditorCaption": ""
