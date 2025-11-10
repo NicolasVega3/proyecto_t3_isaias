@@ -10,6 +10,7 @@ namespace Proyecto_T3_GRUPOTERRONCITOS
     {
         static void Main(string[] args)
         {
+
             int opcion;
 
             do
@@ -44,10 +45,23 @@ namespace Proyecto_T3_GRUPOTERRONCITOS
                         break;
 
                     case 1:
-                        
                         break;
                     case 2:
-
+                        int opcRepor = Registrar.ReportesMenu();
+                        switch (opcRepor) 
+                        {
+                            case 0:
+                                Registrar.docentes();
+                                break;
+                            case 1:
+                                Registrar.alumnos();
+                                break;
+                            case 2:
+                                Registrar.cursos();
+                                break;
+                            case 3:
+                                return;
+                        }
                         break;
                     case 3:
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proyecto_T3_GRUPOTERRONCITOS
 {
-    internal class Reportes
+    public class Reportes
     {
     }
 }

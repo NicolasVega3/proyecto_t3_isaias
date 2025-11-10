@@ -15,12 +15,12 @@
       "RelativeMoniker": "D:0:0:{744C3554-1274-4227-8BB5-83AA29A1D487}|Proyecto_T3_GRUPOTERRONCITOS.csproj|solutionrelative:men\u00FA.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{744C3554-1274-4227-8BB5-83AA29A1D487}|Proyecto_T3_GRUPOTERRONCITOS.csproj|C:\\Users\\USUARIO\\Desktop\\Proyecto_T3_Isaias\\Proyecto_T3_GRUPOTERRONCITOS\\asistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{744C3554-1274-4227-8BB5-83AA29A1D487}|Proyecto_T3_GRUPOTERRONCITOS.csproj|solutionrelative:asistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{744C3554-1274-4227-8BB5-83AA29A1D487}|Proyecto_T3_GRUPOTERRONCITOS.csproj|C:\\Users\\USUARIO\\Desktop\\Proyecto_T3_Isaias\\Proyecto_T3_GRUPOTERRONCITOS\\reportes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{744C3554-1274-4227-8BB5-83AA29A1D487}|Proyecto_T3_GRUPOTERRONCITOS.csproj|solutionrelative:reportes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{744C3554-1274-4227-8BB5-83AA29A1D487}|Proyecto_T3_GRUPOTERRONCITOS.csproj|C:\\Users\\USUARIO\\Desktop\\Proyecto_T3_Isaias\\Proyecto_T3_GRUPOTERRONCITOS\\asistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{744C3554-1274-4227-8BB5-83AA29A1D487}|Proyecto_T3_GRUPOTERRONCITOS.csproj|solutionrelative:asistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,18 +35,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Reportes.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Proyecto_T3_Isaias\\Proyecto_T3_GRUPOTERRONCITOS\\Reportes.cs",
-              "RelativeDocumentMoniker": "Reportes.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Proyecto_T3_Isaias\\Proyecto_T3_GRUPOTERRONCITOS\\Reportes.cs",
-              "RelativeToolTip": "Reportes.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-09T04:19:32.686Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "Asistencia.cs",
               "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Proyecto_T3_Isaias\\Proyecto_T3_GRUPOTERRONCITOS\\Asistencia.cs",
               "RelativeDocumentMoniker": "Asistencia.cs",
@@ -59,15 +47,28 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Reportes.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Proyecto_T3_Isaias\\Proyecto_T3_GRUPOTERRONCITOS\\Reportes.cs",
+              "RelativeDocumentMoniker": "Reportes.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Proyecto_T3_Isaias\\Proyecto_T3_GRUPOTERRONCITOS\\Reportes.cs",
+              "RelativeToolTip": "Reportes.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T04:19:32.686Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Registrar.cs",
               "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\Proyecto_T3_Isaias\\Proyecto_T3_GRUPOTERRONCITOS\\Registrar.cs",
               "RelativeDocumentMoniker": "Registrar.cs",
               "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Proyecto_T3_Isaias\\Proyecto_T3_GRUPOTERRONCITOS\\Registrar.cs",
               "RelativeToolTip": "Registrar.cs",
-              "ViewState": "AgIAAMUAAAAAAAAAAAAwwNsAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAF0BAAAAAAAAAADwv0wBAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-09T06:26:50.517Z",
+              "WhenOpened": "2025-11-10T03:25:53.216Z",
               "EditorCaption": ""
             },
             {
@@ -78,7 +79,7 @@
               "RelativeDocumentMoniker": "men\u00FA.cs",
               "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Proyecto_T3_Isaias\\Proyecto_T3_GRUPOTERRONCITOS\\men\u00FA.cs",
               "RelativeToolTip": "men\u00FA.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwAoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-09T03:35:19.36Z",
               "EditorCaption": ""
@@ -91,7 +92,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\USUARIO\\Desktop\\Proyecto_T3_Isaias\\Proyecto_T3_GRUPOTERRONCITOS\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwDMAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-09T03:30:09.929Z",
               "EditorCaption": ""

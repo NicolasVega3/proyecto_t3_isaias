@@ -10,24 +10,24 @@ namespace Proyecto_T3_GRUPOTERRONCITOS
     public class Registrar
     {
         //Arreglos y def de variables de docentes
-        public static string[] nombreDocente = new string[0];
-        public static int[] DNI_DOCENTE = new int[0];
-        public static string nombre_DO;
-        public static int DNI_DO;
+        private static string[] nombreDocente = new string[0];
+        private static int[] DNI_DOCENTE = new int[0];
+        private static string nombre_DO;
+        private static int DNI_DO;
 
         //Arreglos y def de variables de alumnos
-        public static string[] nombreAlumno = new string[0];
-        public static int[] DNI_Alumno = new int[0];
-        public static string nombre_Al;
-        public static int DNI_Al;
+        private static string[] nombreAlumno = new string[0];
+        private static int[] DNI_Alumno = new int[0];
+        private static string nombre_Al;
+        private static int DNI_Al;
 
         //Arreglos y def de variables de cursos
-        public static string[] nomCurso = new string[0];
-        public static double[] precioCurso = new double[0];
-        public static int[] codigoCurso = new int[0];
-        public static string nom_Curso;
-        public static double newPrecio;
-        public static string codigo_Curso;
+        private static string[] nomCurso = new string[0];
+        private static double[] precioCurso = new double[0];
+        private static int[] codigoCurso = new int[0];
+        private static string nom_Curso;
+        private static double newPrecio;
+        private static string codigo_Curso;
 
         public static int SelecRegistrar() 
         {
@@ -63,6 +63,7 @@ namespace Proyecto_T3_GRUPOTERRONCITOS
                 }
                 for (int i = 0; i < opciones.Length; i++) 
                 {
+                    Console.SetCursorPosition(2, 5+i);
                     if (i == index)
                     {
                         
@@ -220,25 +221,6 @@ namespace Proyecto_T3_GRUPOTERRONCITOS
             codigo_Curso = Console.ReadLine();
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             Console.Write("CURSO: ");
             nom_Curso = Console.ReadLine();
 
@@ -288,6 +270,108 @@ namespace Proyecto_T3_GRUPOTERRONCITOS
             precioCurso[precioCurso.Length - 1] = precio;
 
             Console.WriteLine("\n\t  Libro registrado correctamente");
+        }
+
+        public static int ReportesMenu()
+        {
+            ConsoleKey tecla;
+            string[] opciones = { "DOCENTE", "ESTUDIANTE", "CURSO", "VOLVER" };
+            string[] arregloMenu = { "REGISTRAR", "ASISTENCIA", "REPORTES", "SALIDA" };
+            int index = 0;
+
+            do
+            {
+                Console.Clear();
+                Console.BackgroundColor = ConsoleColor.Green;
+                Console.ForegroundColor = ConsoleColor.Black;
+                Console.WriteLine("------------------------------------------------------");
+                Console.WriteLine("           SISTEMA DE GESTIÓN DE ASISTENCIA           ");
+                Console.WriteLine("------------------------------------------------------");
+                Console.ResetColor();
+                Console.WriteLine();
+
+                for (int i = 0; i < arregloMenu.Length; i++)
+                {
+                    if (i == 2)
+                    {
+                        Console.BackgroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = ConsoleColor.Black;
+                        Console.Write("    " + arregloMenu[i] + "    ");
+                        Console.ResetColor();
+                    }
+                    else
+                    {
+                        Console.Write(arregloMenu[i] + "     ");
+                    }
+                }
+                for (int i = 0; i < opciones.Length; i++)
+                {
+                    Console.SetCursorPosition(2, 5 + i);
+                    if (i == index)
+                    {
+
+                        Console.BackgroundColor = ConsoleColor.Yellow;
+                        Console.ForegroundColor = ConsoleColor.Black;
+                        Console.WriteLine($"{opciones[i]}");
+                        Console.ResetColor();
+                    }
+                    else
+                    {
+                        Console.WriteLine($"{opciones[i]}");
+                    }
+                }
+                ConsoleKeyInfo info = Console.ReadKey(true);
+                tecla = info.Key;
+
+                if (tecla == ConsoleKey.DownArrow)
+                {
+                    index++;
+                    if (index >= opciones.Length)
+                        index = 0;
+                }
+                else if (tecla == ConsoleKey.UpArrow)
+                {
+                    index--;
+                    if (index < 0)
+                        index = opciones.Length - 1;
+                }
+
+            } while (tecla != ConsoleKey.Enter);
+            return index;
+        }
+
+        public static void docentes() 
+        {
+            Console.SetCursorPosition(10, 10);
+            Console.WriteLine("DOCENTES:\n");
+            if (nombreDocente.Length == 0)
+                Console.WriteLine("No hay docentes registrados.\n");
+            else
+                for (int i = 0; i < nombreDocente.Length; i++)
+                    Console.WriteLine($"Nombre: {nombreDocente[i]}  |  DNI: {DNI_DOCENTE[i]}");
+
+        }
+
+        public static void alumnos() 
+        {
+            Console.SetCursorPosition(10, 10);
+            Console.WriteLine("ESTUDIANTES:\n");
+            if (nombreAlumno.Length == 0)
+                Console.WriteLine("No hay estudiantes registrados.\n");
+            else
+                for (int i = 0; i < nombreAlumno.Length; i++)
+                    Console.WriteLine($"Nombre: {nombreAlumno[i]}  |  DNI: {DNI_Alumno[i]}");
+        }
+
+        public static void cursos() 
+        {
+            Console.SetCursorPosition(10, 10);
+            Console.WriteLine("CURSOS:\n");
+            if (nomCurso.Length == 0)
+                Console.WriteLine("No hay cursos registrados.\n");
+            else
+                for (int i = 0; i < nomCurso.Length; i++)
+                    Console.WriteLine($"Curso: {nomCurso[i]}  |  Precio: S/.{precioCurso[i]}");
         }
     }
 }
