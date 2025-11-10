@@ -29,10 +29,16 @@ namespace Proyecto_T3_GRUPOTERRONCITOS
 
                                 break;
                             case 1:
-                                //Llamar al método para registrar estudiante
+                                Registrar.regiAlummnos();
+                                Console.SetCursorPosition(10, 18);
+                                Console.Write("Presione cualquier tecla para volver al menú");
+                                Console.ReadKey();
                                 break;
                             case 2:
-                                //Llamar al método para registrar curso
+                                Registrar.regilibro();
+                                Console.SetCursorPosition(10, 18);
+                                Console.Write("Presione cualquier tecla para volver al menú");
+                                Console.ReadKey();
                                 break;
                         }
                         break;

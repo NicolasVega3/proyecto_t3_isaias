@@ -9,10 +9,25 @@ namespace Proyecto_T3_GRUPOTERRONCITOS
 {
     public class Registrar
     {
+        //Arreglos y def de variables de docentes
         public static string[] nombreDocente = new string[0];
         public static int[] DNI_DOCENTE = new int[0];
         public static string nombre_DO;
         public static int DNI_DO;
+
+        //Arreglos y def de variables de alumnos
+        public static string[] nombreAlumno = new string[0];
+        public static int[] DNI_Alumno = new int[0];
+        public static string nombre_Al;
+        public static int DNI_Al;
+
+        //Arreglos y def de variables de cursos
+        public static string[] nomCurso = new string[0];
+        public static double[] precioCurso = new double[0];
+        public static int[] codigoCurso = new int[0];
+        public static string nom_Curso;
+        public static double newPrecio;
+        public static string codigo_Curso;
 
         public static int SelecRegistrar() 
         {
@@ -92,6 +107,7 @@ namespace Proyecto_T3_GRUPOTERRONCITOS
 
             bool dniValidoYUnico = true;
             bool existeDNIDO = false;
+
             do
             {
                 Console.Write("\t  DNI: ");
@@ -119,22 +135,159 @@ namespace Proyecto_T3_GRUPOTERRONCITOS
                     {
                         
                         Console.WriteLine("\t  El DNI ya existe. Intente con otro");
+                        Console.WriteLine("Presione cualquier teclara para volver a intentar");
                         Console.ReadKey();
                         Console.Write("\t  DNI: ");
                         DNI_DO = Convert.ToInt32(Console.ReadLine());
                         dniValidoYUnico = true;
                     }
                 }
-
             } while (dniValidoYUnico == false);
-
-            Console.WriteLine("\t  DOCENTE CORRECTAMENTE REGISTRADO");
-
+            
             Array.Resize(ref DNI_DOCENTE, DNI_DOCENTE.Length + 1);
             Array.Resize(ref nombreDocente, nombreDocente.Length + 1);
 
             DNI_DOCENTE[DNI_DOCENTE.Length - 1] = DNI_DO;
             nombreDocente[nombreDocente.Length - 1] = nombre_DO;
+
+            Console.WriteLine("\t  DOCENTE CORRECTAMENTE REGISTRADO");
+        }
+
+
+        public static void regiAlummnos()
+        {
+            Console.SetCursorPosition(10, 10);
+            Console.WriteLine("REGISTRO DE ALUMNO");
+            Console.SetCursorPosition(10, 11);
+            Console.Write("Nombre: ");
+            nombre_Al = Console.ReadLine();
+
+            bool dniValidoYUnico = true;
+            bool existeDNIDO = false;
+
+            do
+            {
+                Console.Write("\t  DNI: ");
+                DNI_Al = Convert.ToInt32(Console.ReadLine());
+
+                if (!(DNI_Al < 100000000 && DNI_Al > 9999999))
+                {
+                    Console.WriteLine("\t  DNI debe tener 8 dígitos");
+                    Console.WriteLine("\t  Presione cualquier tecla para volver a intentarlo");
+                    Console.ReadKey();
+                    dniValidoYUnico = false;
+                }
+                else
+                {
+                    for (int i = 0; i < DNI_Alumno.Length; i++)
+                    {
+                        if (DNI_Alumno[i] == DNI_Al)
+                        {
+                            existeDNIDO = true;
+                            break;
+                        }
+                    }
+
+                    if (existeDNIDO == true)
+                    {
+
+                        Console.WriteLine("\t  El DNI ya existe. Intente con otro");
+                        Console.WriteLine("\t  Presione cualquier teclara para volver a intentar");
+                        Console.ReadKey();
+                        Console.Write("\t  DNI: ");
+                        DNI_Al = Convert.ToInt32(Console.ReadLine());
+                        dniValidoYUnico = true;
+                    }
+                }
+            } while (dniValidoYUnico == false);
+           
+            Array.Resize(ref DNI_Alumno, DNI_Alumno.Length + 1);
+            Array.Resize(ref nombreAlumno, nombreAlumno.Length + 1);
+
+            nombreAlumno[nombreAlumno.Length - 1] = nombre_Al;
+            DNI_Alumno[DNI_Alumno.Length - 1] = DNI_Al;
+
+            Console.WriteLine("\t  ALUMNO CORRECTAMENTE REGISTRADO");
+        }
+
+
+        public static void regilibro()
+        {
+            Console.SetCursorPosition(10, 10);
+            Console.WriteLine("REGISTRO DE LIBRO");
+            Console.SetCursorPosition(10, 11);
+            Console.WriteLine("CODIGO: ");
+            codigo_Curso = Console.ReadLine();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            Console.Write("CURSO: ");
+            nom_Curso = Console.ReadLine();
+
+            bool existelibro = false;
+
+            if (nom_Curso == "")
+            {
+                Console.WriteLine("\t  El nombre no puede estar vacio. Intente de nuevo");
+                return;
+            }
+
+            for (int i = 0; i < nom_Curso.Length; i++)
+            {
+                if (nomCurso[i] == nom_Curso)
+                {
+                    existelibro = true;
+                    break;
+                }
+            }
+
+            if (existelibro == true)
+            {
+                Console.WriteLine("\t  El libro ya existe. Intente con otro");
+                Console.WriteLine("");
+                return;
+            }
+
+            double precio;
+            while (true)
+            {
+                Console.Write("\t  PRECIO: ");
+                if (double.TryParse(Console.ReadLine(), out precio))
+                {
+                    if (precio >= 0)
+                    {
+                        break;
+                    }
+                }
+
+                Console.WriteLine("\t  Ingrese un precio correcto (>= 0)!\n");
+            }
+
+            Array.Resize(ref nomCurso, nomCurso.Length + 1);
+            Array.Resize(ref precioCurso, precioCurso.Length + 1);
+
+            nomCurso[nomCurso.Length - 1] = nom_Curso;
+            precioCurso[precioCurso.Length - 1] = precio;
+
+            Console.WriteLine("\n\t  Libro registrado correctamente");
         }
     }
 }
